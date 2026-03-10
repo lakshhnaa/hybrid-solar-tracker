@@ -34,7 +34,7 @@ This system introduces a decision mechanism that moves the solar panel only when
 
 ## Hardware Components
 
-- Arduino / ESP32
+- ESP32
 - LDR sensors
 - Servo motor
 - Solar panel

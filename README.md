@@ -4,11 +4,28 @@ An embedded system that maximizes net solar energy generation by combining hybri
 
 ## Features
 
-• Hybrid sun tracking (sensor + time based)
-• Energy-aware movement decision
-• Real-time solar power monitoring
-• Motor optimization to reduce power loss
-• Embedded microcontroller implementation
+## Key Features
+
+• Hybrid Sun Tracking  
+Combines real-time LDR sensor feedback with algorithm-based positioning to improve tracking accuracy.
+
+• Energy-Aware Tracking Logic  
+The panel moves only when the expected solar power gain is greater than the energy consumed by the motor.
+
+• Real-Time Power Estimation  
+The system estimates solar output using voltage and current sensing to calculate instantaneous power.
+
+• Movement Threshold Control  
+A threshold is implemented to prevent unnecessary motor oscillations due to minor light variations.
+
+• Low-Power Embedded Design  
+Implemented on ESP32 for efficient sensor processing and motor control.
+
+• Modular Embedded Architecture  
+Sensor reading, power estimation, and motor control are separated logically for easier expansion.
+
+• Expandable for Smart Energy Systems  
+The system can be extended with IoT monitoring, AI-based prediction, or weather-adaptive tracking.
 
 ## System Overview
 

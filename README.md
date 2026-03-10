@@ -1,94 +1,93 @@
-# Hybrid Tracking and Energy-Aware Solar Tracker System
+# ☀️⚡ Hybrid Energy-Aware Solar Tracker (ESP32)
 
-An embedded system that maximizes net solar energy generation by combining hybrid sun tracking and energy-aware decision algorithms.
+Built using **ESP32 + sensor fusion + embedded control logic** to maximize **net solar power generation**.
 
-## Features
+---
 
-## Key Features
+# 🚀 Project Vision
 
-• Hybrid Sun Tracking  
-Combines real-time LDR sensor feedback with algorithm-based positioning to improve tracking accuracy.
+Traditional solar trackers rotate continuously, which often **wastes energy on motor movement**.
 
-• Energy-Aware Tracking Logic  
-The panel moves only when the expected solar power gain is greater than the energy consumed by the motor.
+This project introduces an **Energy-Aware Solar Tracking System** that evaluates:
 
-• Real-Time Power Estimation  
-The system estimates solar output using voltage and current sensing to calculate instantaneous power.
+Energy Gain from Repositioning  
+vs  
+Energy Consumed by Motor Movement  
 
-• Movement Threshold Control  
-A threshold is implemented to prevent unnecessary motor oscillations due to minor light variations.
+The panel moves **only when the energy gain is higher than the motor cost**.
 
-• Low-Power Embedded Design  
-Implemented on ESP32 for efficient sensor processing and motor control.
+⚡ Higher net energy output  
+⚡ Reduced mechanical wear  
+⚡ Intelligent renewable energy control  
 
-• Modular Embedded Architecture  
-Sensor reading, power estimation, and motor control are separated logically for easier expansion.
+---
 
-• Expandable for Smart Energy Systems  
-The system can be extended with IoT monitoring, AI-based prediction, or weather-adaptive tracking.
+# 🧠 Core Concepts
 
-## System Overview
+### 🔭 Hybrid Sun Tracking
+Two **LDR sensors** are placed on opposite sides of the solar panel to detect light intensity differences.  
+The ESP32 compares these readings to determine the **direction of maximum sunlight**.
 
-Traditional solar trackers continuously move, consuming unnecessary energy.  
-This system introduces a decision mechanism that moves the solar panel only when the expected energy gain exceeds motor energy consumption.
+---
 
-## Hardware Components
 
-- ESP32
-- LDR sensors
-- Servo motor
-- Solar panel
-- Voltage sensing circuit
-- Current sensor (ACS712)
+---
 
-## Software
+### 🧩 Embedded System Architecture
+All decision-making is handled by the **ESP32 microcontroller**, which performs:
 
-Language:
-- Embedded C (Arduino)
+• Sensor acquisition  
+• Light difference calculation  
+• Power estimation  
+• Energy-aware decision logic  
+• Servo motor actuation  
 
-Tools:
-- Arduino IDE
-- Python (optional analysis)
-- KiCad (optional PCB)
+---
+---
 
-## System Architecture
+# 💻 Tech Stack
 
-Input Layer
-- Light Sensors
-- Voltage Sensor
-- Current Sensor
+The Hybrid Energy-Aware Solar Tracker is implemented using a lightweight **embedded firmware architecture** designed for real-time sensor processing and motor control.
 
-Processing Layer
-- Hybrid tracking algorithm
-- Energy-aware decision logic
+### ⚙️ Programming Language
+- **Embedded C / C++** (Arduino Framework)
 
-Output Layer
-- Servo motor positioning
+### 🧠 Microcontroller Platform
+- **ESP32 Development Board**
 
-## Energy-Aware Logic
+### 🛠 Development Environment
+- **Arduino IDE** – firmware development and debugging  
+- **ESP32 Board Package** – hardware abstraction and drivers
 
-The panel moves only when:
+### 📚 Core Libraries
+- **Servo.h** – servo motor control  
+- **Arduino Core Libraries** – GPIO, ADC, timing functions
 
-Power Gain > Motor Energy Consumption
+### 🔬 Functional Modules
 
-Power is calculated as:
+**Sensor Interface Module**
+- Reads analog signals from LDR sensors
+- Acquires voltage and current sensor data
+- Performs signal scaling and normalization
 
-P = V × I
+**Tracking Algorithm Module**
+- Computes light intensity difference
+- Determines optimal panel rotation direction
 
-## Applications
+**Energy-Aware Decision Module**
+- Calculates instantaneous solar power
 
-- Off-grid solar systems
-- IoT energy nodes
-- Smart agriculture
-- Remote sensing stations
+- Compares power gain with motor energy cost
+- Enables movement only when energy gain is positive
 
-## Future Work
+**Motor Control Module**
+- Controls servo motor rotation
+- Applies movement constraints and threshold logic
 
-- AI-based predictive tracking
-- Weather adaptive system
-- IoT dashboard monitoring
+### 📊 Optional Analysis Tools
+- **Python (Matplotlib / Pandas)** – solar output visualization
+- **Serial Monitor** – real-time debugging and power tracking
 
-## Author
-
-Lakshnaa Jayakumar  
-Electronics & Computer Science Engineering
+### 🔧 Version Control
+- **Git**
+- **GitHub repository for firmware, documentation, and hardware files**
